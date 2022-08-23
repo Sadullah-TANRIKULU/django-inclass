@@ -1,0 +1,28 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'base/index.css' %}"/>
+</head>
+
+
+<h1>bu sayfa base app altındadır</h1>
+{{ request.user }}
+<br/>
+{% comment %} {{ caption | title }} {% endcomment %}
+{{ caption | upper }}
+{% comment %} 
+truncatechars
+title
+slice
+
+ {% endcomment %}
+<ul>
+
+    {% for i in my_list %}
+    <li>{{ i }}</li>
+    {% endfor %}
+</ul>
+
+{# single line comment #}
+
+<img src="{% static 'base/ITF011_TR_TEAM.png' %} " width="300px" alt="django time">
