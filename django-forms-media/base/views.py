@@ -30,9 +30,10 @@ def student_page(request):
         #Student.objects.create(**student_data)
         student = Student(**student_data)
         student.save()
-        return redirect('base')
+        # return redirect('base')
     context = {
-        'form': form
+        'form': form,
+        'msg': 'msg',
     }
 
     return render(request, 'base.html', context)

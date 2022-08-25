@@ -26,10 +26,11 @@
 	  enctype="multipart/form-data"	 
 	  >
 	  {% csrf_token %}
-        {% comment %} {{ form }} {% endcomment %}
-		<label for="name">student name</label>
-  		<input type="text" name="name" id="name" />
-		<input type="submit" value="OK" class="cursor-pointer" >
+        {{ form.as_p }}
+        {{ msg }}
+		 {% comment %} <label for="name">student name</label>
+  		<input type="text" name="name" id="name" /> {% endcomment %}
+		<button type="submit" class="cursor-pointer" >OK</button> 
       </form>
     </div>
   </body>
