@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %} {% block container %}
+<form action="" method="POST">
+  <p style="display: flex align-items: center">Are You Sure!</p>
+  <p>{{ student }}</p>
+  {% csrf_token %}
+
+  <input type="submit" value="Yes" />
+</form>
+<a href="{% url 'list' %}">
+  <button>No</button>
+</a>
+{% endblock container %}

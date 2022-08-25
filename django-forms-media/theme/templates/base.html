@@ -15,22 +15,22 @@
         <h1 class="text-5xl">Django + Tailwind = ❤️</h1>
       </section>
 
-      <h1 class="text-3xl">Home Page</h1>
+      <h1 class="text-3xl border-2 border-red-500 bg-emerald-600">Home Page</h1>
 
       <h3>Student App</h3>
 
       <form 
 	  action="" 
 	  method="POST" 
-	  class="text-2xl"
+	  class="text-3xl border-2 border-red-500"
 	  enctype="multipart/form-data"	 
 	  >
 	  {% csrf_token %}
         {{ form.as_p }}
-        {{ msg }}
+        {% comment %} {{ msg }} {% endcomment %}
 		 {% comment %} <label for="name">student name</label>
   		<input type="text" name="name" id="name" /> {% endcomment %}
-		<button type="submit" class="cursor-pointer" >OK</button> 
+		<button type="submit" class="cursor-pointer m-4" >OK</button> 
       </form>
     </div>
   </body>
