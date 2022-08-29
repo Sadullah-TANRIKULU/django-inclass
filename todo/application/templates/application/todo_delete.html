@@ -1,0 +1,17 @@
+{% extends 'application/base.html' %}
+
+{% block content %}
+
+<h1>delete</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <p style="display: flex align-items: center">Are You Sure!</p>
+    <p>{{ todo }}</p>
+  
+    <input type="submit" value="Yes" />
+  </form>
+  <a href="{% url 'delete' %}">
+    <button>No</button>
+  </a>
+
+{% endblock content %}

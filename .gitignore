@@ -125,6 +125,7 @@ venv.bak/
 tailenv/
 modenv/
 djaenv/
+todoenv/
 
 # Spyder project settings
 .spyderproject
